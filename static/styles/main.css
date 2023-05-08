@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif !important;
+  background-color: #f7f7f7 !important;
+}
+
+.navbar {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+
+.navbar a {
+  color: #000000;
+  font-weight: bold;
+  background-color: #ffd700;
+  padding: 10px 10px;
+  border-radius: 30px;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.heading {
+  overflow: hidden;
+  margin-top: 27%;
+  color: #ffffff;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold !important;
+}
+
+.heading h1 {
+  font-weight: bold;
+  font-size: 72px;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.sub-heading {
+  font-size: 28px;
+}
+
+.button {
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: #ffd700;
+  border: none;
+  color: #000000;
+  padding: 5px 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+.options h1 {
+  font-weight: bold;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.options .card {
+  height: 40vh;
+  border: none;
+}
+
+.card .card-title {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.questions-form {
+  margin-top: 6rem;
+}
+
+.questions-form form {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.questions-form .card {
+  padding: 20px;
+  margin-bottom: 1rem;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: end;
+}
+
+.result {
+  height: 88vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.result .card {
+  width: 40%;
+  margin-left: 30%;
+  height: 40vh;
+  align-items: center;
+}
+
+.card-text {
+  font-size: 24px;
+}
+
+.suggestions {
+  margin-top: 7rem;
+}
+
+.suggestions .card-title {
+  font-size: 24px;
+}
+
+.suggestions .card-text {
+  font-size: 18px;
+}
+
+.col-md-4 {
+  width: 30% !important;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+        <link href="../static/styles/main.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <title>document</title>
+        
+    </head>
+    <body>
+      <nav class="navbar fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+            <strong>GC07</strong>
+          </a>
+        </div>
+      </nav>
+      <div class="container questions-form">
+        <div class="text-center mb-5">
+          <h1>Answer a few questions to get started </h1>
+        </div>
+        <div class="form">
+        <form method="POST" action="/textual-analysis" class="form">
+          <div class="form-group card">
+            <label for="Age"><strong>Age</strong></label>
+              <input
+              type="number"
+              class="form-control"
+              id="age"
+              name="age"
+              placeholder="Enter the value (example:50)"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+          <div class="form-group card">
+              <label for="gender"><strong>Gender</strong></label>
+              <div class="form-check mt-1">
+                  <input type="radio" id="female" name="gender" value="2" style="font-weight: bold">
+              <label for="female">Female</label><br/>
+                <input type="radio" id="male" name="gender" value="1" style="font-weight: bold">
+              <label for="male">Male</label><br/>
+                <input type="radio" id="other" name="gender" value="0" style="font-weight: bold">
+              <label for="other">Other</label>
+              </div>
+          </div>
+          <div class="form-group card">
+            <label for="self_employed"><strong>Are you a self employed?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="self_employed" value="1" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="self_employed" value="0" style="font-weight: bold">
+              <label for="no">No</label>
+            </div>             
+          </div>
+          <div class="form-group card">
+            <label for="family_history"><strong>Do you have a family history of mental illness?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="family_history" value="1" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="family_history" value="0" style="font-weight: bold">
+              <label for="no">No</label><br>
+            </div>             
+          </div>
+          <div class="form-group card">
+            <label for="work_interface"><strong>If you have a mental health condition, do you feel that it interferes with your work?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="don'tknow" name="work_interface" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label><br>
+              <input type="radio" id="never" name="work_interface" value="1" style="font-weight: bold">
+              <label for="never">Never</label><br>
+              <input type="radio" id="often" name="work_interface" value="2" style="font-weight: bold">
+              <label for="often">Often</label><br>
+              <input type="radio" id="rarely" name="work_interface" value="3" style="font-weight: bold">
+              <label for="rarely">Rarely</label><br>
+              <input type="radio" id="sometimes" name="work_interface" value="0" style="font-weight: bold">
+              <label for="sometimes">Sometimes</label>
+            </div>              
+          </div>
+          <div class="form-group card">
+            <label for="no_employees"><strong>How many employees does your company or organization have?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="1-5" name="no_employees" value="0" style="font-weight: bold">
+              <label for="1-5">one to five(1-5)</label><br>
+              <input type="radio" id="6-25" name="no_employees" value="4" style="font-weight: bold">
+              <label for="6-25">6-25</label><br>
+              <input type="radio" id="26-100" name="no_employees" value="2" style="font-weight: bold">
+              <label for="26-100">26-100</label><br>
+              <input type="radio" id="100-500" name="no_employees" value="1" style="font-weight: bold">
+              <label for="100-500">100-500</label><br>
+              <input type="radio" id="500-1000" name="no_employees" value="3" style="font-weight: bold">
+              <label for="500-1000">500-1000</label><br>
+              <input type="radio" id="morethan_1000" name="no_employees" value="5" style="font-weight: bold">
+              <label for="morethan_1000"> morethan 1000</label>
+            </div>              
+          </div>
+          <div class="form-group card">
+            <label for="remote_work"><strong>Do you work remotely (outside of an office) at least 50% of the time?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="remote_work" value="1" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="remote_work" value="0" style="font-weight: bold">
+              <label for="no">No</label>
+            </div>              
+          </div>  
+      
+      
+          <div class="form-group card">
+            <label for="tech_company"><strong>Is your employer primarily a tech company/organization?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="tech_company" value="1" style="font-weight: bold">
+              <label for="yes">YES</label><br>
+              <input type="radio" id="no" name="tech_company" value="0" style="font-weight: bold">
+              <label for="no">NO</label><br>
+            </div>              
+          </div>   
+          <div class="form-group card">
+            <label for="benefits"><strong>Does your employer provide mental health benefits?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="benefits" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="benefits" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="don'tknow" name="benefits" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label>
+            </div>
+          </div>
+          <div class="form-group card">
+            <label for="care_option"><strong>Do you know the options for mental health care your employer provides?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="care_option" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="care_option" value="1"  style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="not_sure" name="care_option" value="0" style="font-weight: bold">
+              <label for="not_sure">Not sure</label>
+            </div>                         
+          </div>
+          <div class="form-group card">
+            <label for="wellness_program"><strong>Has your employer ever discussed mental health as part of an employee wellness program?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="wellness_program" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="wellness_program" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="don'tknow" name="wellness_program" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label>
+            </div> 
+          </div>
+          <div class="form-group card">
+            <label for="seek_help"><strong>Does your employer provide resources to learn more about mental health issues and how to seek help?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="seek_help" value="2" style="font-weight: bold">
+              <label for="yes">yes</label><br>
+              <input type="radio" id="no" name="seek_help" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="don'tknow" name="seek_help" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label>
+            </div>
+          </div>
+      
+          <div class="form-group card">
+            <label for="anonymity"><strong> Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="anonymity" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="anonymity" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="don'tknow" name="anonymity" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label>
+            </div>
+          </div>
+          <div class="form-group card">
+            <label for="leave"><strong> How easy is it for you to take medical leave for a mental health condition?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="don'tknow" name="leave" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label><br>
+              <input type="radio" id="somewhat_difficult" name="leave" value="1" style="font-weight: bold">
+              <label for="somewhat_difficult">Somewhat Difficult</label><br>
+              <input type="radio" id="somewhat_easy" name="leave" value="2" style="font-weight: bold">
+              <label for="somewhat_easy">Somewhat_easy</label><br>
+              <input type="radio" id="very_difficult" name="leave" value="3" style="font-weight: bold">
+              <label for="very_difficult">Very Difficult</label><br>
+              <input type="radio" id="very_easy" name="leave" value="4" style="font-weight: bold">
+              <label for="very_easy">Very Easy</label>
+              </div>
+          </div>
+          <div class="form-group card">
+            <label for="mentalhealthconsequence"><strong> Do you think that discussing a mental health issue with your employer would have negative consequences</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="mentalhealthconsequence" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="mentalhealthconsequence" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="maybe" name="mentalhealthconsequence" value="0" style="font-weight: bold">
+              <label for="maybe">May be</label>
+              </div>           
+            </div>
+          <div class="form-group card">
+            <label for="physhealthconsequence"><strong> Do you think that discussing a physical health issue with your employer would have negative consequences</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="physhealthconsequence" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="physhealthconsequence" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="maybe" name="physhealthconsequence" value="0" style="font-weight: bold">
+              <label for="maybe">May be</label>
+              </div>            
+          </div>
+          <div class="form-group card">
+            <label for="coworkers"><strong> Would you be willing to discuss a mental health issue with your coworkers?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="coworkers" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="coworkers" value="0" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="some of them" name="coworkers" value="1" style="font-weight: bold">
+              <label for="some of them">Some of them</label>
+              </div>            
+          </div>
+          <div class="form-group card">
+            <label for="supervisor"><strong>Would you be willing to discuss a mental health issue with your Supervisor?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="supervisor" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="supervisor" value="0" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="Some of them" name="supervisor" value="1" style="font-weight: bold">
+              <label for="Some of them">Some of them</label>
+              </div>            
+            </div>      
+          <div class="form-group card">
+            <label for="mentalhealthinterview"><strong> Do you think that discussing a mental health issue with your employer would have negative consequences</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="mentalhealthinterview" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="mentalhealthinterview" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="maybe" name="mentalhealthinterview" value="0" style="font-weight: bold">
+              <label for="maybe">May be</label>
+            </div>           
+          </div>
+          <div class="form-group card">
+            <label for="physhealthinterview"><strong> Do you think that discussing a physical health issue with your employer would have negative consequences</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="physhealthinterview" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="physhealthinterview" value="1" style="font-weight: bold">
+              <label for="no">No</label><br>
+              <input type="radio" id="maybe" name="physhealthinterview" value="0" style="font-weight: bold">
+              <label for="maybe">May be</label>
+              </div>            
+          </div>      
+          <div class="form-group card">
+            <label for="mentalvsphysical"><strong> Do you feel that your employer takes mental health as seriously as physical health?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="mentalvsphysical" value="2" style="font-weight: bold">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="mentalvsphysical" value="1" style="font-weight: bold">
+              <label for="no">no</label><br>
+              <input type="radio" id="don'tknow" name="mentalvsphysical" value="0" style="font-weight: bold">
+              <label for="don'tknow">Don't know</label>              
+            </div>
+          </div>      
+          <div class="form-group card">
+            <label for="obs_consequence"><strong>Have you heard of or observed negative consequences for coworkers with mental health conditions in your workplace?</strong></label>
+            <div class="form-check mt-1">
+              <input type="radio" id="yes" name="obs_consequence" value="1" style="font-weight: bold">
+              <label for="yes">YES</label><br>
+              <input type="radio" id="no" name="obs_consequence" value="0" style="font-weight: bold">
+              <label for="no">NO</label><br>
+              </div>
+          </div>   
+          <div class="submit-form mb-5">
+            <button
+              type="submit"
+              class="btn btn-warning"
+              style="color: black; font-weight: bold; border-radius:12px;">
+              Submit
+            </button>
+          </div>
+        </form></div>
+      </div>
+    </body>
+</html>
